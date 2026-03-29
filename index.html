@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>MARS VOYAGER | THE NEW FRONTIER</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary-container": "#ef644f",
+            "error": "#ffb4ab",
+            "on-tertiary-fixed-variant": "#8a1b0f",
+            "on-tertiary": "#680300",
+            "surface-dim": "#131313",
+            "on-secondary-container": "#a6b5d6",
+            "on-surface": "#e5e2e1",
+            "on-tertiary-container": "#5b0200",
+            "primary-fixed-dim": "#ffb59e",
+            "on-background": "#e5e2e1",
+            "inverse-surface": "#e5e2e1",
+            "primary-fixed": "#ffdbd0",
+            "surface-bright": "#3a3939",
+            "secondary-container": "#384763",
+            "error-container": "#93000a",
+            "inverse-on-surface": "#313030",
+            "surface-container-low": "#1c1b1b",
+            "on-secondary": "#21314b",
+            "surface-container": "#201f1f",
+            "primary-container": "#ff571a",
+            "primary": "#ffb59e",
+            "on-secondary-fixed-variant": "#384763",
+            "surface-container-highest": "#353534",
+            "on-surface-variant": "#e6beb2",
+            "tertiary": "#ffb4a7",
+            "surface-container-high": "#2a2a2a",
+            "on-error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#852400",
+            "background": "#131313",
+            "on-primary-fixed": "#3a0b00",
+            "on-secondary-fixed": "#0a1b35",
+            "on-tertiary-fixed": "#400100",
+            "surface-tint": "#ffb59e",
+            "secondary": "#b7c7e8",
+            "surface-variant": "#353534",
+            "on-primary": "#5e1700",
+            "secondary-fixed": "#d6e3ff",
+            "outline-variant": "#5c4037",
+            "on-error": "#690005",
+            "secondary-fixed-dim": "#b7c7e8",
+            "on-primary-container": "#521300",
+            "surface-container-lowest": "#0e0e0e",
+            "surface": "#131313",
+            "tertiary-fixed-dim": "#ffb4a7",
+            "inverse-primary": "#ae3200",
+            "outline": "#ad897e",
+            "tertiary-fixed": "#ffdad4"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Manrope"],
+            "label": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="font-body selection:bg-primary/30 selection:text-primary">
+
+  <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-10 py-6 bg-transparent backdrop-blur-md shadow-[0_0_40px_rgba(255,181,158,0.06)]">
+    <div class="text-xl font-black tracking-widest text-orange-600 dark:text-orange-500 font-headline">MARS_VOYAGER</div>
+    <div class="hidden md:flex gap-12 items-center">
+      <a class="nav-link nav-link--active" href="#hero">LAUNCH</a>
+      <a class="nav-link" href="#liftoff">LIFTOFF</a>
+      <a class="nav-link" href="#deepspace">TRANSIT</a>
+      <a class="nav-link" href="#approach">DESCENT</a>
+      <a class="nav-link" href="#exploration">SETTLE</a>
+    </div>
+    <div class="flex items-center gap-4 text-orange-500 dark:text-orange-400">
+      <span class="material-symbols-outlined cursor-pointer hover:text-orange-300 transition-colors duration-300" id="volume-btn">volume_up</span>
+    </div>
+  </nav>
+
+  <aside class="fixed left-0 top-1/2 -translate-y-1/2 z-40 flex flex-col py-8 bg-zinc-950/40 backdrop-blur-xl rounded-r-lg border-r border-white/10 shadow-2xl shadow-orange-950/20">
+    <div class="px-6 mb-8">
+      <h3 class="text-lg font-headline text-orange-500">MISSION LOG</h3>
+      <p class="text-[10px] font-label tracking-widest text-zinc-500">COORD: 18.65°N 226.2°E</p>
+    </div>
+    <div class="flex flex-col gap-2">
+      <a class="side-nav-link side-nav-link--active" href="#hero">
+        <span class="material-symbols-outlined">rocket_launch</span>
+        <span class="text-[10px] font-label tracking-widest uppercase">01 Launch</span>
+      </a>
+      <a class="side-nav-link" href="#liftoff">
+        <span class="material-symbols-outlined">wb_twilight</span>
+        <span class="text-[10px] font-label tracking-widest uppercase">02 Liftoff</span>
+      </a>
+      <a class="side-nav-link" href="#deepspace">
+        <span class="material-symbols-outlined">wb_sunny</span>
+        <span class="text-[10px] font-label tracking-widest uppercase">03 Deep Space</span>
+      </a>
+      <a class="side-nav-link" href="#approach">
+        <span class="material-symbols-outlined">landslide</span>
+        <span class="text-[10px] font-label tracking-widest uppercase">04 Approach</span>
+      </a>
+      <a class="side-nav-link" href="#exploration">
+        <span class="material-symbols-outlined">explore</span>
+        <span class="text-[10px] font-label tracking-widest uppercase">05 Exploration</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden" id="main-scroll">
+
+    <!-- Section 1: Hero / Launch -->
+    <section class="relative h-screen w-full snap-start flex flex-col items-center justify-center px-10 overflow-hidden" id="hero">
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="large space rocket standing vertically on a launchpad at dawn with dramatic orange and purple sky lighting and mist around the base"
+          class="w-full h-full object-cover brightness-[0.4] contrast-[1.1]"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCaPQgVokbKlWWKFSlPAqfDZwUBZ9oPWAKLSB8j-rrgc5A8_VYtaSa2ROICQpv9l_fSqcmP-CIHGNOp6DClgtL6oUpg4NowUJjERo3T9okydrtG0l6peuWvEhUFmOMLxuZR4vRM2lU1QX7_ASXAOSpQfl6UpFsATwSlPwy-7b7w3_vbhyR7dISb_gp7iNimPa772b8Puy9B5Swfe6BbmNgxeOoOi41p1Xo1IfVG2fYqmYKQGhAJIdeWuiFcy0b3u0JFRhhSmd9t-g"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 text-center max-w-5xl">
+        <div class="flex items-center justify-center gap-4 mb-6 opacity-70">
+          <span class="h-[1px] w-12 bg-outline-variant"></span>
+          <span class="text-[10px] font-label tracking-[0.3em] uppercase text-primary">Mission Profile: VOYAGER-01</span>
+          <span class="h-[1px] w-12 bg-outline-variant"></span>
+        </div>
+
+        <h1 class="text-6xl md:text-8xl font-headline font-bold tracking-tighter text-on-surface mb-8 leading-none">
+          LAUNCH SEQUENCE <br/> <span class="text-primary italic">INITIATED</span>
+        </h1>
+
+        <div class="grid grid-cols-4 gap-4 max-w-2xl mx-auto mb-12">
+          <div class="countdown-card">
+            <div class="text-3xl font-headline font-bold text-primary" id="cd-hours">00</div>
+            <div class="text-[9px] font-label uppercase tracking-widest text-zinc-500">Hours</div>
+          </div>
+          <div class="countdown-card">
+            <div class="text-3xl font-headline font-bold text-primary" id="cd-mins">12</div>
+            <div class="text-[9px] font-label uppercase tracking-widest text-zinc-500">Mins</div>
+          </div>
+          <div class="countdown-card">
+            <div class="text-3xl font-headline font-bold text-primary" id="cd-secs">45</div>
+            <div class="text-[9px] font-label uppercase tracking-widest text-zinc-500">Secs</div>
+          </div>
+          <div class="countdown-card">
+            <div class="text-3xl font-headline font-bold text-primary" id="cd-ms">08</div>
+            <div class="text-[9px] font-label uppercase tracking-widest text-zinc-500">Ms</div>
+          </div>
+        </div>
+
+        <a
+          class="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold tracking-widest rounded-md scale-100 hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_0_30px_rgba(255,181,158,0.4)] group"
+          href="#liftoff"
+        >
+          BEGIN MISSION
+          <span class="material-symbols-outlined ml-3 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="absolute bottom-10 left-10 text-[10px] font-label tracking-widest text-zinc-600">
+        SYSTEM_CHECK: <span class="text-green-500/80">OPTIMAL</span><br/>
+        PROPELLANT_LOAD: <span class="text-primary">100%</span>
+      </div>
+    </section>
+
+    <section class="relative h-screen w-full snap-start flex items-center px-20 overflow-hidden bg-surface-dim" id="liftoff">
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="atmospheric view of earth from space with a rocket trail glowing orange in the dark blue upper atmosphere"
+          class="w-full h-full object-cover brightness-[0.5] contrast-[1.2]"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJQgdzvv7jFXXEWLmT9-I7mau52lPN8Lsvj2AKIk3NzK4ckdPcwbUjVuUYdLYUohIzICwHTv32VGWxpD4g5Xkz8ycvyPzWbcKZON8mnFUyC3hrAOT6Sq3sl-D5iKFGxgh0N_4RH6iTSMak7x_gY1Eive9vIiYJBqW23hcEaRSps_dh5diq7MT4fKT5SeIJ80ZmZ0Y0LgFCXkxMe5yuDN9CQuuOV1M7mRBsNGY7Y8S20oyKNWARCK6bxCxJNZrIJ8ItEEl92uavLas"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+        <div class="space-y-8">
+          <div class="inline-block px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-[10px] font-label text-primary tracking-widest uppercase">
+            Phase 02 / Ascension
+          </div>
+          <h2 class="text-5xl md:text-7xl font-headline font-bold tracking-tighter leading-[0.9]">
+            THROUGH THE <br/><span class="text-secondary">EXOSPHERE</span>
+          </h2>
+          <p class="text-lg text-on-surface-variant max-w-md leading-relaxed opacity-80">
+            Breaking through the gravity well. The engines consume 15 metric tons of fuel per second,
+            fighting the atmosphere's final embrace before the silence of the void.
+          </p>
+          <div class="flex gap-12 pt-4">
+            <div class="space-y-1">
+              <span class="text-[10px] font-label uppercase tracking-widest text-zinc-500">Velocity</span>
+              <p class="text-2xl font-headline text-on-surface">28,000 <span class="text-xs opacity-50">km/h</span></p>
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] font-label uppercase tracking-widest text-zinc-500">Altitude</span>
+              <p class="text-2xl font-headline text-on-surface">112 <span class="text-xs opacity-50">km</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden md:block relative">
+          <div class="absolute inset-0 bg-primary/10 blur-[100px] rounded-full"></div>
+          <div class="relative bg-surface-container-low/40 backdrop-blur-xl border border-white/5 p-8 rounded-2xl shadow-2xl">
+            <div class="flex justify-between items-center mb-6">
+              <span class="text-[10px] font-label tracking-widest text-zinc-400 uppercase">Engine_Telemetry</span>
+              <span class="w-2 h-2 bg-primary rounded-full animate-pulse shadow-[0_0_10px_#ffb59e]"></span>
+            </div>
+            <div class="space-y-6">
+              <div class="space-y-2">
+                <div class="flex justify-between text-[10px] font-label uppercase tracking-widest">
+                  <span class="text-zinc-500">Main Thruster Pressure</span>
+                  <span class="text-primary" id="thruster-pct">98.4%</span>
+                </div>
+                <div class="h-1 bg-white/5 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary-container to-primary shadow-[0_0_10px_#ff571a] telemetry-bar" style="width:98%"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-[10px] font-label uppercase tracking-widest">
+                  <span class="text-zinc-500">Thermal Integrity</span>
+                  <span class="text-secondary">Optimal</span>
+                </div>
+                <div class="h-1 bg-white/5 rounded-full overflow-hidden">
+                  <div class="h-full bg-secondary shadow-[0_0_10px_#b7c7e8] telemetry-bar" style="width:92%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative h-screen w-full snap-start flex flex-col items-center justify-center px-10 overflow-hidden bg-[#0a0a0a]" id="deepspace">
+      <div class="absolute inset-0 z-0 opacity-40">
+        <!-- CSS star dots -->
+        <div class="absolute h-1 w-1 bg-white rounded-full top-1/4 left-1/4 animate-pulse"></div>
+        <div class="absolute h-1 w-1 bg-white rounded-full top-1/2 left-3/4 animate-pulse delay-700"></div>
+        <div class="absolute h-[2px] w-[2px] bg-secondary rounded-full top-3/4 left-1/3 animate-pulse delay-300"></div>
+        <div class="absolute h-1 w-1 bg-primary rounded-full top-1/3 left-2/3 animate-pulse delay-500"></div>
+        <img
+          alt="vast dark deep space background with far away galaxies and distant nebula dust in purple and deep blue colors"
+          class="w-full h-full object-cover brightness-[0.3]"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM6EDThKeK9Py7gtV2Yh9MvmOhDgc4P0yk00_RoYMbCkiMviSNYlr2KHwmoNi02yBMQQ_mjQU44qoQIqAI4cQqawS2g3hEPih1umE_XrEExoa2-P_sejolU5bTKb3rxbnZSlSepqXHbMfHtEUt9amQ-pSiTz_MDcew-Nwevi3XAmwyDDsBvd8CZ1EoYiVfX_oVt1yf94aS6-1zDJqeVhI_9A49Odfrnr-zReXI1yHx-lUTKZkAZ27X1Iak9vMsC4iLVUxQFMRMI0g"
+        />
+      </div>
+
+      <div class="relative z-10 w-full max-w-6xl">
+        <div class="text-center mb-20">
+          <h2 class="text-6xl font-headline font-bold text-on-surface mb-4 tracking-tighter">THE GREAT SILENCE</h2>
+          <p class="text-zinc-500 font-label tracking-widest uppercase" id="transit-days">Transit Duration: 214 Days Remaining</p>
+        </div>
+
+        <!-- Mission Progress Timeline -->
+        <div class="relative py-12 px-8 bg-surface-container-low/20 backdrop-blur-2xl border border-outline-variant/15 rounded-3xl">
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 h-full w-[1px] bg-outline-variant/20 hidden md:block"></div>
+          <div class="grid md:grid-cols-3 gap-12 relative z-10">
+
+            <div class="text-right flex flex-col items-end md:pr-12 group">
+              <span class="material-symbols-outlined text-zinc-500 mb-4 group-hover:text-primary transition-colors">travel_explore</span>
+              <h3 class="text-xl font-headline font-bold text-on-surface">LEAVING LEO</h3>
+              <p class="text-sm text-zinc-500 mt-2">Low Earth Orbit escape achieved at T+04:30:00.</p>
+              <div class="mt-4 text-[10px] font-label text-primary bg-primary/5 px-2 py-1 rounded">COMPLETED</div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center relative">
+              <div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-4 shadow-[0_0_40px_rgba(255,87,26,0.3)] border border-primary/40 relative">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">rocket</span>
+                <div class="absolute -bottom-2 -right-2 bg-surface-bright p-1 rounded-full border border-outline-variant text-[8px] font-bold live-badge">LIVE</div>
+              </div>
+              <h3 class="text-xl font-headline font-bold text-primary">DEEP SPACE TRANSIT</h3>
+              <p class="text-sm text-on-surface-variant text-center mt-2 max-w-[200px]">Current position: Mid-course correction burn successful.</p>
+            </div>
+
+            <div class="text-left md:pl-12 flex flex-col items-start group">
+              <span class="material-symbols-outlined text-zinc-700 mb-4 group-hover:text-secondary transition-colors">adjust</span>
+              <h3 class="text-xl font-headline font-bold text-zinc-600">MARS ARRIVAL</h3>
+              <p class="text-sm text-zinc-700 mt-2">Orbital insertion scheduled for Julian Date 2460654.</p>
+              <div class="mt-4 text-[10px] font-label text-zinc-700 bg-white/5 px-2 py-1 rounded uppercase tracking-tighter">Pending</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative h-screen w-full snap-start flex items-center justify-end px-10 md:px-32 overflow-hidden bg-[#1a0a05]" id="approach">
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="extreme close up of mars planet with detailed red rocky texture and craters dominating the entire frame in high contrast"
+          class="w-full h-full object-cover brightness-[0.6] contrast-[1.3] scale-110"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZXmhl-lZPkjoBCraDReX9Bptup8rXg7ePi5bR2GYGLtUgE2YbYBGotVii5zhE_l1Kpq-5-z9pw-edYYT9dF9H7vWaxAswolPM7URHkKZJrGtRa7M59kUaoxOIJKO_hZRhSFo775f-ArN3Z7xXcxvcZTcZCdc-K-elITtF9Gl92IN6WcNDUh_Y1DWP0eweJAe0hI0JLIniv435_vvIUNtN6dbOqA_FezaIPw6mehbEIbw6VWIouKLLpwvIO9khn7vnYOAWlW4R6M4"
+        />
+        <div class="absolute inset-0 bg-gradient-to-l from-black/60 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 w-full max-w-xl space-y-8">
+        <div class="bg-surface-dim/80 backdrop-blur-xl p-10 rounded-2xl border border-primary/20 shadow-2xl hud-scanline">
+          <div class="flex items-center gap-4 mb-8">
+            <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings:'FILL' 1;">warning</span>
+            <div>
+              <h2 class="text-2xl font-headline font-bold text-on-surface uppercase tracking-tight">Descent Sequence</h2>
+              <p class="text-[10px] font-label text-zinc-500 tracking-widest uppercase" id="descent-timer">Atmospheric Entry: 140 Seconds to Impact</p>
+            </div>
+          </div>
+
+          <div class="space-y-8">
+            <div class="grid grid-cols-2 gap-8">
+              <div>
+                <label class="text-[9px] font-label text-zinc-500 uppercase tracking-widest block mb-1">Current Altitude</label>
+                <div class="text-4xl font-headline font-bold text-on-surface flex items-baseline" id="altitude-display">
+                  42.8<span class="text-lg text-primary ml-1 uppercase">km</span>
+                </div>
+              </div>
+              <div>
+                <label class="text-[9px] font-label text-zinc-500 uppercase tracking-widest block mb-1">Descent Velocity</label>
+                <div class="text-4xl font-headline font-bold text-on-surface flex items-baseline">
+                  5.4<span class="text-lg text-primary ml-1 uppercase">km/s</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 bg-red-950/20 border-l-4 border-primary rounded-r">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-[10px] font-label text-primary uppercase font-bold">Heat Shield Status</span>
+                <span class="text-[10px] font-label text-on-surface" id="heat-temp">1,650°C</span>
+              </div>
+              <div class="h-1.5 bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-primary w-[85%] shadow-[0_0_15px_#ffb59e]" id="heat-bar"></div>
+              </div>
+            </div>
+
+            <div class="pt-4 flex items-center justify-between border-t border-white/5">
+              <div class="flex gap-2" id="status-lights">
+                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                <div class="w-2 h-2 rounded-full bg-zinc-800"></div>
+              </div>
+              <button class="text-[10px] font-label text-primary-container uppercase font-black hover:text-primary transition-colors" id="abort-btn">
+                Emergency Abort _
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute left-10 top-1/2 -translate-y-1/2 hidden lg:block opacity-30 rotate-90">
+        <span class="text-[100px] font-headline font-bold text-outline uppercase whitespace-nowrap tracking-tighter">APPROACHING_RED_01</span>
+      </div>
+    </section>
+
+    <section class="relative h-screen w-full snap-start flex flex-col items-center justify-center px-10 overflow-hidden bg-[#20100a]" id="exploration">
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="cinematic wide angle shot of a high tech robotic rover sitting on the rocky dusty martian surface at sunset with two moons in the sky"
+          class="w-full h-full object-cover brightness-[0.5] contrast-[1.1]"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfDU34Y5IeT2Vr63Afi5TR5YRKIwH3Covs4v7pAo0bWipw033SBbjvz0v6cl5GmGKH4Wb-tQ8wrwqwK2Ut1Dg6SW66BbjpyBSm2jkdSWTfWu29DKzQO23Hj2TQcnRqWGKmJIF5U30N2dO4ZViz49UGX94wS4Ls5UdQVsfXO1KHgIlSn_heX6d-II2JVMibCu6gepaw-v5nivXdDOTwT9jdpq-FKvvy26MlmkSyWLHBlzYQ3vFFdaPsxfwlWVwSpCJFmHYbdhfQmbc"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-black/20 to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 text-center space-y-10">
+        <div class="inline-flex items-center gap-6 px-8 py-3 bg-surface-container-low/40 backdrop-blur-md rounded-full border border-white/5">
+          <span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1;">location_on</span>
+          <span class="text-[11px] font-label text-on-surface tracking-[0.2em] uppercase">Jezero Crater, Mars</span>
+          <span class="h-4 w-[1px] bg-white/20"></span>
+          <span class="text-[11px] font-label text-primary tracking-[0.2em] uppercase" id="sol-counter">SOL 001</span>
+        </div>
+
+        <div class="space-y-4">
+          <h2 class="text-7xl md:text-9xl font-headline font-bold tracking-tighter text-on-surface leading-none drop-shadow-2xl">
+            THE NEW <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-b from-primary to-primary-container">FRONTIER</span>
+          </h2>
+          <p class="text-xl font-body text-secondary-fixed max-w-2xl mx-auto opacity-70 leading-relaxed font-light">
+            Humanity has arrived. The dust of another world is beneath our feet, and the stars are no longer just lights in the sky—they are destinations.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 pt-10">
+          <button class="explore-btn" id="explore-btn">
+            EXPLORE SURFACE
+            <span class="material-symbols-outlined align-middle ml-2 text-primary">travel_explore</span>
+          </button>
+          <button class="colony-btn" id="colony-btn">ESTABLISH COLONY</button>
+        </div>
+      </div>
+
+      <footer class="absolute bottom-0 left-0 w-full z-50 flex justify-between items-end px-10 pb-8 pointer-events-none">
+        <div class="text-[10px] font-mono tracking-widest text-zinc-500 font-label pointer-events-auto">
+          © 2026 CELESTIAL VOYAGER // NASA DATA INTERFACE
+        </div>
+        <div class="flex gap-16 items-center pointer-events-auto">
+          <a class="footer-link" href="#">SENSORS</a>
+          <a class="footer-link" href="#">TELEMETRY</a>
+          <a class="footer-link" href="#">TRAJECTORY</a>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <div class="fixed bottom-10 right-10 z-50 hidden md:block">
+    <button class="flex items-center justify-center w-16 h-16 bg-primary-container text-on-primary-container rounded-full shadow-[0_10px_30px_rgba(255,87,26,0.3)] hover:scale-110 active:scale-90 transition-transform group" id="fab-btn">
+      <span class="material-symbols-outlined text-3xl" style="font-variation-settings:'FILL' 1;">rocket_launch</span>
+      <div class="fab-tooltip">
+        <span class="text-[10px] font-label text-on-surface tracking-widest uppercase">Quick Action: Launch Protocols</span>
+      </div>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
